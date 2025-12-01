@@ -1,0 +1,22 @@
+:root{--bg:#06121a;--panel:#081827;--accent:#3fd67a;--muted:#9bb0b9}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#e6eef3;background:linear-gradient(180deg,#04101a,#021018)}
+.panel{position:fixed;left:12px;top:12px;background:var(--panel);padding:14px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6);width:320px;z-index:40}
+.panel.hidden{display:none}
+.preview{height:120px;background:#02111a;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.row{display:flex;gap:8px}
+.btn{background:linear-gradient(90deg,#3fd67a,#2bb86a);border:none;color:#022;padding:10px;border-radius:8px;font-weight:700;cursor:pointer}
+.btn.small{padding:8px 10px;font-size:13px}
+.btn.tiny{padding:6px 8px;font-size:12px}
+.muted{color:var(--muted);font-size:13px;margin-top:8px}
+.back{margin-top:10px}
+#hud{position:fixed;right:12px;top:12px;background:var(--panel);padding:10px;border-radius:10px;z-index:40;display:flex;flex-direction:column;gap:6px}
+#glCanvas{position:fixed;left:0;top:0;width:100vw;height:100vh;display:block}
+.touch-stick{position:fixed;width:140px;height:140px;border-radius:50%;opacity:0.9;z-index:45;display:none}
+#touch-left{left:18px;bottom:18px;background:radial-gradient(circle,#0f2730,#062022)}
+#touch-right{right:18px;bottom:18px;background:radial-gradient(circle,#0f2730,#062022)}
+.hidden{display:none!important}
+#shop-items, #crate-list, #skin-row{display:flex;flex-wrap:wrap;gap:8px}
+.skin-btn{padding:8px;border-radius:8px;background:#0b1520;border:1px solid #172e33;color:#9fb7a9;cursor:pointer}
+.skin-btn.active{border-color:var(--accent);color:#021}
+.tiny{font-size:12px;padding:6px}
