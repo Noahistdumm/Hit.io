@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <title>FPS.IO — Three.js Starter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- START UI -->
+  <div id="ui-start" class="panel">
+    <h1>FPS.IO</h1>
+    <div id="preview" class="preview">Loading preview...</div>
+    <input id="nick" placeholder="Nick" value="Spieler"/>
+    <div id="skin-row"></div>
+    <div class="row">
+      <button id="btn-play" class="btn">Play</button>
+      <button id="btn-shop" class="btn small">Shop</button>
+      <button id="btn-crates" class="btn small">Crates</button>
+    </div>
+    <div class="muted">HP = Währung. Crates & Shop nutzen HP.</div>
+    <div id="hostJoinRow" style="margin-top:10px">
+      <button id="hostBtn" class="btn tiny">Host P2P</button>
+      <button id="joinBtn" class="btn tiny">Join P2P</button>
+    </div>
+  </div>
+
+  <!-- SHOP -->
+  <div id="ui-shop" class="panel hidden">
+    <h2>Shop</h2>
+    <div id="shop-items"></div>
+    <button class="btn back">Zurück</button>
+  </div>
+
+  <!-- CRATES -->
+  <div id="ui-crates" class="panel hidden">
+    <h2>Crates</h2>
+    <div id="crate-list"></div>
+    <button class="btn back">Zurück</button>
+  </div>
+
+  <!-- GAME HUD -->
+  <div id="hud" class="hidden">
+    <div id="hpbar">HP: <span id="hp">100</span></div>
+    <div id="ammo">Ammo: <span id="ammo">30</span></div>
+    <div id="score">Punkte: <span id="scoreN">0</span></div>
+    <button id="voice-toggle" class="tiny">Voice</button>
+  </div>
+
+  <!-- Touch sticks -->
+  <div id="touch-left" class="touch-stick"></div>
+  <div id="touch-right" class="touch-stick"></div>
+
+  <!-- Canvas (Three.js) -->
+  <canvas id="glCanvas" class="hidden"></canvas>
+
+  <audio id="remoteAudio" autoplay></audio>
+
+  <!-- libs -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
