@@ -2,15 +2,15 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-  <title>FPS.IO — Three.js Starter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>FPS.IO — Three.js Starter (no-folders)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- START UI -->
   <div id="ui-start" class="panel">
     <h1>FPS.IO</h1>
-    <div id="preview" class="preview">Loading preview...</div>
+    <div id="preview" class="preview">Preview</div>
     <input id="nick" placeholder="Nick" value="Spieler"/>
     <div id="skin-row"></div>
     <div class="row">
@@ -39,10 +39,10 @@
     <button class="btn back">Zurück</button>
   </div>
 
-  <!-- GAME HUD -->
+  <!-- HUD -->
   <div id="hud" class="hidden">
     <div id="hpbar">HP: <span id="hp">100</span></div>
-    <div id="ammo">Ammo: <span id="ammo">30</span></div>
+    <div id="ammo">Ammo: <span id="ammoN">30</span></div>
     <div id="score">Punkte: <span id="scoreN">0</span></div>
     <button id="voice-toggle" class="tiny">Voice</button>
   </div>
@@ -51,12 +51,21 @@
   <div id="touch-left" class="touch-stick"></div>
   <div id="touch-right" class="touch-stick"></div>
 
-  <!-- Canvas (Three.js) -->
+  <!-- Canvas -->
   <canvas id="glCanvas" class="hidden"></canvas>
 
   <audio id="remoteAudio" autoplay></audio>
 
-  <!-- libs -->
-  <script type="module" src="js/main.js"></script>
+  <!-- Scripts -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="db.js"></script>
+  <script type="module" src="joystick.js"></script>
+  <script type="module" src="input.js"></script>
+  <script type="module" src="multiplayer.js"></script>
+  <script type="module" src="game.js"></script>
+  <script type="module" src="shop.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
+
